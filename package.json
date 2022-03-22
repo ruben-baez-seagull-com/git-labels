@@ -5,13 +5,17 @@
     "license": "MIT",
     "dependencies": {
         "@actions/core": "^1.2.4",
-        "@actions/github": "^2.2.0"
+        "@actions/github": "^2.2.0",
+        "@vercel/ncc": "^0.33.3"
     },
     "scripts": {
-        "build": "tsc && ncc build lib/index.js"
+        "build": "ncc build src/index.ts --source-map --minify --license licenses.txt",
+        "lint": "eslint src/**/*.ts __tests__/**/*.ts",
+        "format": "eslint --fix src/**/*.ts __tests__/**/*.ts",
+        "test": "jest --coverage",
+        "all": "yarn run build && yarn run format && yarn test"
     },
     "devDependencies": {
-        "@zeit/ncc": "^0.22.3",
         "typescript": "^3.9.3"
     }
 }
