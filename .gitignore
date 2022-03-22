@@ -3,7 +3,6 @@
 kube-config.yaml
 
 # compiled output
-/dist
 /tmp
 /out-tsc
 
