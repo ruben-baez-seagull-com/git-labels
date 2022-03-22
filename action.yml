@@ -1,0 +1,15 @@
+name: 'Labels on PR'
+description: 'Get PR labels'
+inputs:
+  github-token:
+    description: 'The repository token, i.e. secrets.GITHUB_TOKEN'
+    required: true
+outputs:
+  result:
+    description: Labels of PR
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'check-circle'
+  color: 'green'
