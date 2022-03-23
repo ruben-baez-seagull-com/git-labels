@@ -4,6 +4,9 @@ inputs:
   github-token:
     description: 'The repository token, i.e. secrets.GITHUB_TOKEN'
     required: true
+  commit-sha:
+    description: 'Commit sha'
+    required: true
 outputs:
   result:
     description: Labels of PR
